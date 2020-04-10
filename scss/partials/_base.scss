@@ -1,0 +1,104 @@
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow-x: hidden;
+	font-size: 62.5%;
+	background-color: #333;
+}
+
+body {
+	font-family: "proxima-nova-soft",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1;
+	color: $charcoal;
+	overflow-x: hidden;
+}
+
+.site_wrap {
+	min-width: 100%;
+	min-height: 100%;
+	position: relative;
+	top: 0;
+	bottom: 100%;
+	overflow-x: hidden;
+	//height: 100%;
+	width: 100%;
+	left: 0;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -webkit-backface-visibility:hidden;
+    -webkit-perspective: 200;
+
+	&.stop_scroll {
+		position: fixed;
+		overflow-y: hidden;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $charcoal;
+}
+
+p {
+	margin-bottom: 1.6rem;
+}
+
+::selection {
+	background: lighten($red, 5%);
+	opacity: 0.8;
+	color: $white;
+	text-shadow: 0 0 1px $charcoal;
+}
+
+::moz-selection {
+	background: lighten($red, 5%);
+	opacity: 0.8;
+	color: $white;
+	text-shadow: 0 0 1px $charcoal;
+}
+
+.oldies {
+	background: lighten($charcoal, 20%);
+	color: $white;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+// Buttons
+
+.gradient_btn {
+	@include linear-gradient(#bb1834, #9b142b);
+	border-radius: 5px;
+	padding: 15px 30px;
+	color: $white;
+	
+	&:hover {
+		@include linear-gradient(#880001, #820012);
+	}
+}
+
+.red_link {
+	color: $red;
+	font-weight: 700;
+	text-transform: uppercase;
+	
+	&:hover {
+		color: #880001;
+	}
+	
+	&:after {
+		font-family: FontAwesome;
+		font-weight: normal;
+		font-style: normal;
+		content: "\f0da";
+		padding-left: 4px;
+	}
+}
+

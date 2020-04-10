@@ -1,0 +1,33 @@
+// mixins
+
+// fonts
+
+@mixin proximaReg {
+	font-family: "proxima-nova-soft",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@mixin proximaSemi {
+	font-family: "proxima-nova-soft",sans-serif;
+	font-style: normal;
+	font-weight: 600;
+}
+
+@mixin proximaBold {
+	font-family: "proxima-nova-soft",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+}
+
+@mixin proximaRegSemi {
+	font-family: "proxima-nova",sans-serif;
+	font-style: normal;
+	font-weight: 600;
+}
+
+@mixin proximaRegLight {
+	font-family: "proxima-nova",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}

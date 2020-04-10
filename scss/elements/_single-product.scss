@@ -1,0 +1,22 @@
+.msds {
+	display: inline-block;
+	height: 44px;
+	width: 36px;
+	margin-right: 10px;
+	background: url('../images/msds-off.png') no-repeat;
+	
+	&:hover {
+		background: url('../images/msds-on.png') no-repeat;
+	}
+}
+
+.tds {
+	display: inline-block;
+	height: 44px;
+	width: 36px;
+	background: url('../images/tds-off.png') no-repeat;
+	
+	&:hover {
+		background: url('../images/tds-on.png') no-repeat;
+	}
+}

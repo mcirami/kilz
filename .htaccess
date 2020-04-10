@@ -1,0 +1,30 @@
+#Options -MultiViews
+RewriteEngine on
+RewriteBase /
+RewriteCond %{QUERY_STRING} !^skip=1$
+RewriteRule ^products/primer/(.*)/?$ products.php?type=primers&product=$1 [L]
+RewriteCond %{QUERY_STRING} !^skip=1$
+RewriteRule ^products/specialty/(.*)/?$ products.php?type=specialty&product=$1 [L]
+RewriteRule ^products/primer/?$ products.php?type=primers
+RewriteRule ^products/specialty/?$ products.php?type=specialty
+RewriteRule ^products/seal-surfaces/?$ products.php?filter=seal-surfaces
+RewriteRule ^products/promote-adhesion/?$ products.php?filter=promote-adhesion
+RewriteRule ^products/eliminate-odor/?$ products.php?filter=eliminate-odor
+RewriteRule ^products/heavy-stains/?$ products.php?filter=heavy-stains
+RewriteRule ^products/moderate-stains/?$ products.php?filter=moderate-stains
+RewriteRule ^products/hide-paint/?$ products.php?filter=hide-paint
+RewriteRule ^products/fight-mold/?$ products.php?filter=fight-mold
+RewriteRule ^products/?$ products.php
+RewriteRule ^stores/?$ stores.php
+RewriteRule ^kilz-pro/?$ kilz-pro.php
+RewriteRule ^newsletter/?$ newsletter.php
+RewriteRule ^seal-surfaces/?$ index.php?section=seal-surfaces
+RewriteRule ^promote-adhesion/?$ index.php?section=promote-adhesion
+RewriteRule ^eliminate-odor/?$ index.php?section=eliminate-odor
+RewriteRule ^heavy-stains/?$ index.php?section=heavy-stains
+RewriteRule ^moderate-stains/?$ index.php?section=moderate-stains
+RewriteRule ^hide-paint/?$ index.php?section=hide-paint
+RewriteRule ^fight-mold/?$ index.php?section=fight-mold
+
+RewriteCond %{QUERY_STRING} !^skip=1$
+RewriteRule ^kilz-pro/(.*)/?$ kilz-pro.php/.php?section=$1 [L]

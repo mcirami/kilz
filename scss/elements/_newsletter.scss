@@ -1,0 +1,253 @@
+.newsletter {
+	@include clearfix;
+
+	.news_hero {
+		@include span-columns(12);
+		background-image: url(../images/news-hero.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		overflow: hidden;
+		text-align: center;
+		height: 390px;
+		
+		h1 {
+			margin-bottom: 10px;
+		}
+		
+		p {
+			font-size: 18px;
+			padding: 0 30%;
+
+			@include media($mobile) {
+				padding: 15px;
+			}
+		}
+	}
+	
+	.benefits {
+		float: left;
+		padding: 0 10%;
+		list-style: none;
+		text-align: center;
+        position: relative;
+        bottom: 60px;
+		
+		li {
+			@include span-columns(4);
+			padding: 0 20px;
+			display: inline-block;
+
+			@include media($mobile) {
+				@include span-columns(4);
+				margin-bottom: 60px;
+				margin-right: 0;
+				padding: 0 12px;
+			}
+
+			&:last-child {
+
+				@include media($mobile) {
+					margin-bottom: 40px;
+				}
+			}
+			
+			img {
+				height: 120px;
+			}
+			
+			h4 {
+				@include proximaSemi;
+				text-transform: uppercase;
+				font-size: 20px;
+				margin: 20px 0 10px;
+
+				@include media($mobile) {
+					margin-bottom: 0;
+				}
+			}
+			
+			p {
+				font-size: 18px;
+				line-height: 1.4;
+			}
+		}
+	}
+
+	.signup {
+		width: 100%;
+		float: left;
+		text-align: center;
+		margin: 0 auto 80px;
+
+		.form_wrap {
+			@include span-columns(4.8);
+			display: inline-block;
+			padding: 28px;
+			float: none;
+			margin: 0 auto;
+			background: rgba(58, 143, 210, 0.3);
+			border-radius: 5px;
+			text-align: center;
+
+			@include media($tablet) {
+				width: 50%;
+			}
+
+			@include media($mobile) {
+				width: 80%;
+				padding: 30px 20px;
+			}
+
+            @include media($smallMobile) {
+              width: 100%;
+            }
+
+			input[type=text] {
+				width: 100%;
+				padding: 10px 12px;
+				border-radius: 5px;
+				border-style: none;
+				margin-bottom: 10px;
+
+				@include media($mobile) {
+					@include span-columns(4);
+					margin-bottom: 15px;
+					font-size: 18px;
+				}
+
+				&::-webkit-input-placeholder {
+					color: $lightGray;
+				}
+
+				&::-moz-placeholder { /* Mozilla Firefox 19+ */
+					color: $lightGray;
+				}
+				&:-ms-input-placeholder { /* Internet Explorer 10+ */
+					color: $lightGray;
+				}
+			}
+
+			form {
+
+				.error {
+					display: none;
+
+					&.active {
+						width: 100%;
+						display: inline-block;
+						color: $red;
+						text-transform: uppercase;
+						text-align: left;
+						padding-bottom: 10px;
+						font-size: 14px;
+						font-weight: 600;
+					}
+				}
+			}
+
+			.select_wrap {
+				overflow: hidden;
+				border-radius: 5px;
+				height: 38px;
+				margin-bottom: 10px;
+
+				@include media($mobile) {
+					width: 100%;
+					display: inline-block;
+					margin-bottom: 15px;
+				}
+
+				&:after {
+					content:' ';
+					background: url('../images/dropdown-arrow.png') no-repeat;
+					position: absolute;
+					width: 18px;
+					height: 10px;
+					z-index: 4;
+					cursor: pointer;
+					overflow: hidden;
+					pointer-events: none;
+					right: 14px;
+					top: 14px;
+				}
+
+				select {
+					height: 100%;
+					width: 110%;
+					color: $lightGray;
+					border: none;
+					cursor: pointer;
+					overflow: hidden;
+					padding: 6px 10px;
+					background: $white;
+					-webkit-appearance: none;
+
+					&:-ms-expand {
+						display: none;
+					}
+				}
+			}
+
+			#country {
+
+				&.active {
+					color: black;
+				}
+			}
+
+			input[type=submit] {
+				width: 100%;
+				display: block;
+				padding: 12px 2%;
+				text-transform: uppercase;
+
+				@include media($tablet) {
+					padding: 12px 1%;
+				}
+
+				@include media($mobile) {
+					@include span-columns(4);
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+.message {
+	@include span-columns(3);
+	float: none;
+	display: inline-block;
+	padding: 1% 2%;
+	background: rgba(58, 143, 210, 0.3);
+	border-radius: 5px;
+
+	@include media($tablet) {
+		@include span-columns(3);
+		float: none;
+		display: inline-block;
+		padding: 2% 4%;
+	}
+
+	@include media($mobile) {
+		@include span-columns(3);
+		float: none;
+		display: inline-block;
+	}
+
+	h2 {
+		text-transform: none;
+		font-size: 30px;
+		
+		@include media($tablet) {
+			font-size: 25px;
+		}
+	}
+	
+	p {
+		@include media($tablet) {
+			font-size: 14px;
+		}
+	}
+}
